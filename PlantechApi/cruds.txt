@@ -1,0 +1,97 @@
+
+
+public void BuscarCargos()
+public void BuscarCargosId
+public void InserirCargos
+public void EditarCargos
+public void ApagarCargos
+
+
+public void BuscarNivelAcesso()
+public void BuscarNivelAcessoId
+public void InserirNivelAcesso
+public void EditarNivelAcesso
+public void ApagarNivelAcesso
+
+public void BuscarUsuarios()
+public void BuscarUsuariosId
+public void InserirUsuarios
+public void EditarUsuarios
+public void ApagarUsuarios
+
+
+
+
+namespace PIM32024.data.routers // Api
+{
+    public class UsuarioRouter
+    {
+        private UsuarioService usuarioService;
+
+        public UsuarioRouter(UsuarioService usuarioService)
+        {
+            this.usuarioService = usuarioService;
+        }
+
+        public void BuscarUsuariosRouter()
+        {
+            usuarioService.BuscarUsuariosService();
+        }
+        public void BuscarUsuariosIdRouter(int id)
+        {
+            usuarioService.BuscarUsuariosIdService(id);
+        }
+        public void InserirUsuariosRouter(string nome, string email, string senha, int nivelAcesso_pk_nivel, int cargos_pk_cargos)
+        {
+            usuarioService.InserirUsuariosService(nome, email, senha, nivelAcesso_pk_nivel, cargos_pk_cargos);
+        }
+        public void EditarUsuariosRouter(int pk_usuario, string nome, string email, string senha, int nivelAcesso_pk_nivel, int cargos_pk_cargos)
+        {
+            usuarioService.EditarUsuariosService(pk_usuario, nome, email, senha, nivelAcesso_pk_nivel, cargos_pk_cargos);
+        }
+        public void ApagarUsuariosRouter(int pk_usuario)
+        {
+            usuarioService.ApagarUsuariosService(pk_usuario);
+        }
+
+    }
+
+}
+
+
+using PIM32024.data.query;
+
+namespace PIM32024.data.service
+{
+    public class UsuarioService
+    {
+        private UsuarioQuery usuarioQuery;
+
+        public UsuarioService(UsuarioQuery usuarioQuery)
+        {
+            this.usuarioQuery = usuarioQuery;
+        }
+
+        public void BuscarUsuariosService()
+        {
+            usuarioQuery.BuscarUsuarios();
+        }
+        public void BuscarUsuariosIdService(int id)
+        {
+            usuarioQuery.BuscarUsuariosId(id);
+        }
+        public void InserirUsuariosService(string nome, string email, string senha, int nivelAcesso_pk_nivel, int cargos_pk_cargos)
+        {
+            usuarioQuery.InserirUsuarios(nome, email, senha, nivelAcesso_pk_nivel, cargos_pk_cargos);
+        }
+        public void EditarUsuariosService(int pk_usuario, string nome, string email, string senha, int nivelAcesso_pk_nivel, int cargos_pk_cargos)
+        {
+            usuarioQuery.EditarUsuarios(pk_usuario, nome, email, senha, nivelAcesso_pk_nivel, cargos_pk_cargos);
+        }
+        public void ApagarUsuariosService(int pk_usuario)
+        {
+            usuarioQuery.ApagarUsuarios(pk_usuario);
+        }
+
+    }
+}
