@@ -1,0 +1,7 @@
+
+
+Clareza: Cada propriedade que é um Value Object encapsula sua própria lógica, tornando o código mais claro e menos propenso a erros.
+
+Reutilização: Value Objects podem ser reutilizados em outras partes do sistema onde a mesma lógica é necessária.
+
+Imutabilidade: Value Objects são imutáveis, o que ajuda a evitar efeitos colaterais indesejados.
