@@ -1,0 +1,8 @@
+dotnet new webapi --use-controllers -n Api
+
+dotnet new classlib -n Aplicacao
+
+
+dotnet new classlib -n Infra
+
+dotnet new classlib -n Entidades
