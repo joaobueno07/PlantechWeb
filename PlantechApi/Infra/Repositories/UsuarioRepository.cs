@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Entidades.Interfaces;
+using Entidades.Models;
 
 namespace Infra.Repositories
 {
-    public class UsuarioRepository : ICrud
+    public class UsuarioRepository : ICrud<Usuario>
     {
-        public void Apagar(int pk_usuario)
+        public void Apagar(Usuario entidade)
         {
             throw new NotImplementedException();
         }
@@ -18,22 +19,17 @@ namespace Infra.Repositories
             throw new NotImplementedException();
         }
 
-        public void BuscarId(int id)
+        public void BuscarId(Usuario entidade)
         {
             throw new NotImplementedException();
         }
 
-        public void BuscarId(string id)
+        public void Editar(Usuario entidade)
         {
             throw new NotImplementedException();
         }
 
-        public void Editar(int pk_usuario, string nome, string email, string senha, int nivelAcesso_pk_nivel, int cargos_pk_cargos)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Inserir(string nome, string email, string senha, int nivelAcesso_pk_nivel, int cargos_pk_cargos)
+        public void Inserir(Usuario entidade)
         {
             throw new NotImplementedException();
         }

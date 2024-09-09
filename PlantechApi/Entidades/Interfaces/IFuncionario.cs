@@ -9,7 +9,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Entidades.Interfaces
 {
-    public interface IFuncionario
+    public interface IFuncionario<T> where T : class
     {
         public void RegistrarPlantio(Date dataInicio);
         public void ConsumirItens(Item Item, int Quantidade);
@@ -17,6 +17,6 @@ namespace Entidades.Interfaces
         public void FazerVenda(Produto produto);
         public void FazerCompras(Produto produto);
         public bool RegistrarNovoFuncionario(Usuario usuario, Cargo cargo);
-        public void Cadastro(string nome, Email email, string tipoUsuario, Date dataNascimento, Endereco endereco, Telefone telefone);
+        public void Cadastro(T entidade);
     }
 }
