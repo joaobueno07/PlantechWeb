@@ -7,6 +7,12 @@ namespace Entidades.Models
 {
     public class Produto
     {
-        
+        // -Nome:string
+        // -Descricao:string
+        // -PrecoVenda:double
+        // -QuantidadeEstoque:int
+        // -Tipo:string
+        // -CustoCompra:double
+        // -DataValidade:date
     }
 }

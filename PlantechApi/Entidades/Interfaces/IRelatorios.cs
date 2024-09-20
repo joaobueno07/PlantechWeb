@@ -9,9 +9,9 @@ namespace Entidades.Interfaces
     {
         //Funcionario
 
-        public void GerarRelatorioProducao(); // agricultor
-        public void GerarRelatorioCompra();
-        public void GerarRelatorioVenda();
+        // public void GerarRelatorioProducao(); // agricultor
+        // public void GerarRelatorioCompra();
+        // public void GerarRelatorioVenda();
 
         
     }

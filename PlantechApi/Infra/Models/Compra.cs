@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace Infra.Models;
 
-public partial class Ordemcompra
+public partial class Compra
 {
-    public int IdOrdemCompra { get; set; }
+    public int IdCompra { get; set; }
 
     public int? IdFornecedor { get; set; }
 
@@ -13,9 +13,11 @@ public partial class Ordemcompra
 
     public string? Descricao { get; set; }
 
+    public int? IdFuncionario { get; set; }
+
     public decimal? Valor { get; set; }
 
-    public string? Status { get; set; }
-
     public virtual Fornecedore? IdFornecedorNavigation { get; set; }
+
+    public virtual Funcionario? IdFuncionarioNavigation { get; set; }
 }

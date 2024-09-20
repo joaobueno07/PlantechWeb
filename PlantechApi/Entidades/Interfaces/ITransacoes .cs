@@ -8,9 +8,9 @@ namespace Entidades.Interfaces
     public interface ITransacoes 
     {
 
-        public bool ReceberVenda();
-        public bool EfetuarPagamento();
-        public void AcompanharStatus();
+        // public bool ReceberVenda();
+        // public bool EfetuarPagamento();
+        // public void AcompanharStatus();
 
     }
 }

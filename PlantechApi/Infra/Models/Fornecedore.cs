@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Infra.Models;
 
-public partial class Cliente
+public partial class Fornecedore
 {
     public int Cnpj { get; set; }
 
@@ -15,9 +15,7 @@ public partial class Cliente
 
     public string? Endereco { get; set; }
 
-    public string? Status { get; set; }
+    public virtual ICollection<Compra> Compras { get; set; } = new List<Compra>();
 
-    public virtual ICollection<Contasreceber> Contasrecebers { get; set; } = new List<Contasreceber>();
-
-    public virtual ICollection<Venda> Venda { get; set; } = new List<Venda>();
+    public virtual ICollection<Ordemcompra> Ordemcompras { get; set; } = new List<Ordemcompra>();
 }
